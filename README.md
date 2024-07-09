@@ -5,100 +5,64 @@ PEC (产品中心) 按照系统设计规划属于**信贷基础域范畴(BEC,DEC
 #### 二，有什么功能
 
 ##### 1、模版管理
-
 <img width="1223" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/76c0eda8-6009-4621-9a4f-404b7e0f2133">
 
-
 ##### 2、配置要素信息
-
 <img width="1220" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/47f6e38c-7914-4e99-ab17-89319a3c64eb">
 
-
 ##### 3、配置产品信息
-
 <img width="1223" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/9cf717a1-be77-42b9-8138-02cd0ddfa71b">
 
-
 ##### 4、配置资方信息
-
 <img width="1222" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/73b098ed-ad76-4635-8b33-742c215c8b77">
-
 
 ##### 5、配置担保方信息
 
 <img width="1219" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/2fad9ac0-54a3-4d85-91bf-74b2fd7a0bbe">
 
-
 ##### 6、定价管理
-
 ######      6.1 产品定价
-
 <img width="1219" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/38832e95-ff98-4606-8745-d6c60e6f9827">
 
-
 ######      6.2 资方定价   
-
 <img width="1220" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/27083bc1-b6eb-4c0d-8d48-45ac15fd5d20">
 
-
 ##### 7、配置费项
-
 <img width="1221" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/c01a14cb-fa7e-438e-aa25-1e0b26564f38">
 
-
 ##### 8、渠道关系管理
-
 <img width="1218" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/52350642-30a1-4199-bbe9-b0a2a50c305c">
 
-
 ##### 9、信托计划配置
-
 <img width="1216" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/bb0a8f68-5fe5-49d3-a3da-b6316b0aa231">
 
-
 ##### 10、资方关系配置
-
 <img width="1223" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/8a62bb0f-0d5b-49a3-80d2-e775dbcfd6ae">
 
-
 #### 三，表关系
-
 ##### 产品关系
-
 ![pec-产品关系 产品关系 -2023425173410](https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/95b3fc36-41f4-483b-a7d0-d3808d119511)
 
-
 ##### 资方关系
-
 ![pec-资方关系 资方关系 -2023425173410](https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/98bb0b4b-3fab-4fe7-8dce-fc4e429d02e8)
 
-
 #### 四，使用场景
-
 ##### 1、贷前试算
-
-调 PEC根据用户等级、标签、借款期次、资方编码、渠道、还款方式等查询合适的产品定价，再通过定价结果调用 FCC试算进行算费。
+调PEC根据用户等级、标签、借款期次、资方编码、渠道、还款方式等查询合适的产品定价，再通过定价结果调用 FCC试算进行算费。
 <img width="1220" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/b4b77037-d678-4e2b-a8b1-915b49f39450">
 
-
 ##### 2、资管路由配置
-
- 资方业务规则配置根据产品代码查询支持的产品期次
+资方业务规则配置根据产品代码查询支持的产品期次
 <img width="1191" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/d473b071-9466-4690-bc11-3166cc55f1e1">
 
-
 ##### 3、贷中进件创建标的
-
 查询产品定价镜像、资方还款公式、清分公式等信息落入标的系统 BEC标的表。业务发生时刻落库的数据，使用的是在PEC中当时的镜像编号，可用于回溯。
 <img width="1221" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/77c6f999-39d7-4d92-b0a8-936d6843af67">
 
-
 ##### 4、贷后提前结清限制
-
 查询要素中的提前结清方式，提前结清手机尾号开放范围，订单开放范围
 <img width="1221" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/6d5f955c-46d6-433c-812f-1cab94875381">
 <img width="955" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/ac22992f-a145-416d-9777-187085a7ad5b">
-
 
 ##### 5、OMC运营管理
 
@@ -108,32 +72,22 @@ PEC (产品中心) 按照系统设计规划属于**信贷基础域范畴(BEC,DEC
 ###### 5.2 变价
 <img width="947" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/87b02e8d-da3b-4c14-9dca-433165d1781d">
 
-
 ##### 6、FCC计算
-
 通过定价镜像编号查询费项，要素(如:产品年天数,分期周期单位,分期周期数值,多资方宽限期,提前结清方式)进行运算
 PEC要素：
 <img width="957" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/a6896bfd-9e86-4cfb-85b3-20542cb6a9f6">
-
 FCC部分代码：
 <img width="955" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/038f371b-f711-4c2e-a509-15efddaba72d">
-
 生成债务债权宽限时期，**宽限期只是对客不展示逾期费项，而不是不计算逾期费项，**逾期费项也会配置宽限天数；费项介绍可到[查询费项](#3、查询费项)
 <img width="957" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/3a63ec0e-9b4b-465e-8594-d83d4d5f4cc5">
 
-
 ##### 7、LSC-JOB批扣
-
 查询要素逾期持续批扣期数，逾期账龄小于逾期持续批扣期数进行批扣
 <img width="955" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/8c9ac3a6-68dd-4994-8494-a129b6caa6de">
 
-
 #### 五，重要接口
-
 ##### 1、查询合适的产品定价
-
 ​      com.gomefinance.consumerfinance.pec.facade.ProductFacade#querySuitableProductPricing
-
 ``` mysql
 一，查询资方关系，是否存在父子资方：
 SELECT *
@@ -176,13 +130,10 @@ LIMIT 1;
 ```
 
 ###### 常见的问题
-
 ​        一，进件到FCC生成债务债权时报空指针异常，如：南京银行只有A等级的定价，但进件时测试环境没改用户等级，还是B等级；虽然PEC没有异常，返回的定价是兜的定价保证试算不出问题，但进件就会报错；
-<img width="958" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/764debd7-c0bd-4443-9eee-080250c58bb9">
-​       
+<img width="958" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/764debd7-c0bd-4443-9eee-080250c58bb9"> 
 ​       二，期次对应不上，如：新网银行进件依赖资方的还款计划，测试环境挡板配置的是9期，但进件是12期；传给PEC的参数也是12期A等级；
 <img width="945" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/b85952aa-8b46-47b5-a716-18bcb55ecf38">
-
 
 ##### 2、查询合适的资方定价
 
@@ -248,12 +199,10 @@ where f_pricing_type = 2
 
 ​      逾期费项宽限天数和要素配置的宽限期天数分管不同的功能；逾期费项配置几天就几天后开始计算，过了宽限天数逾期几天就计算几天。
 
-
 ##### 4、查询提前结清利率(适用于4%千一切换场景)
 
 ​      com.gomefinance.consumerfinance.pec.facade.ProductFacade#queryPreSettleRate
 <img width="953" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/cadd9699-ab08-4211-875b-4443c290f631">
-
 
 ###### 第一版：按资方维度
 
@@ -262,13 +211,11 @@ where f_pricing_type = 2
 ​    要素值举例2： （利息）
 <img width="955" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/4e718dce-b35d-4447-97b7-46c9d736513d">
 
-
 ###### 第二版：按资方+产品+费项维度
 
    单一资方5551产品支持百4,  6901 产品不支持百4情况时，配置 **CAPITAL_PRODUCT_PRE_SETTLE_RATE** 要素
    要素值：[{"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 <img width="943" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/c81815a7-d411-4379-9ce2-229b3963ab9b">
-
 
 ###### 第三版：按资方+产品+费项维度 默认定价由千一换成了0.065%
 
@@ -298,7 +245,6 @@ where f_pricing_type = 2
         {"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}
       ]
 ```
-
 ​              优先 [{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 ​     四，如果一个资方但不同产品，5551要默认0.065%，6901支持4%，**不同产品相同费项**，那配置就可以是这样
 ​              **CAPITAL_PRODUCT_PRE_SETTLE_RATE**(按资方+产品维度+费项)
@@ -319,6 +265,4 @@ where f_pricing_type = 2
          {"preSettleRate":{"name":"6901","value":"SERVICE_FEE"}}
        ]
 ```
-
-​     六，如果一个资方不同产品，5551要默认0.065%，6901支持4%，**不同产品不同费项，费项里有利息**，如：5551是利息，6901是服务费，​不支持这样的配置，**目前也没这场景**，如要支持该场景，就改下代码
 
