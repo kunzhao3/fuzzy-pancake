@@ -76,8 +76,10 @@ PEC (产品中心) 按照系统设计规划属于**信贷基础域范畴(BEC,DEC
 通过定价镜像编号查询费项，要素(如:产品年天数,分期周期单位,分期周期数值,多资方宽限期,提前结清方式)进行运算
 PEC要素：
 <img width="957" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/a6896bfd-9e86-4cfb-85b3-20542cb6a9f6">
+
 FCC部分代码：
 <img width="955" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/038f371b-f711-4c2e-a509-15efddaba72d">
+
 生成债务债权宽限时期，**宽限期只是对客不展示逾期费项，而不是不计算逾期费项，**逾期费项也会配置宽限天数；费项介绍可到[查询费项](#3、查询费项)
 <img width="957" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/3a63ec0e-9b4b-465e-8594-d83d4d5f4cc5">
 
