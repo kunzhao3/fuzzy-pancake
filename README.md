@@ -208,9 +208,10 @@ where f_pricing_type = 2
 <img width="953" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/cadd9699-ab08-4211-875b-4443c290f631">
 
 ###### 第一版：按资方维度
+​    单一资方所有产品，共享提前结清百4时，配置**CAPITAL_PRE_SETTLE_RATE_FEE_CODE** 要素
 
-​    单一资方所有产品，共享提前结清百4时，配置**CAPITAL_PRE_SETTLE_RATE_FEE_CODE** 要素 
 ​    要素值举例1：SERVICE_FEE（服务费）
+
 ​    要素值举例2： （利息）
 <img width="955" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/4e718dce-b35d-4447-97b7-46c9d736513d">
 
@@ -230,6 +231,7 @@ where f_pricing_type = 2
 
 ​    单一资方5551产品千一和百四配置 **CAPITAL_MILLI_AND_FOURPERCENT_PRE_SETTLE_RATE** 要素
 ​    要素值：[{"milliPreSettleRate":[{"name":"5551-A","value":"SERVICE_FEE"}]},{"fourPercentPreSettleRate":[{"name":"5551-B,C,D","value":"SERVICE_FEE_TWO"}]}]
+<img width="1054" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/3e50c8cf-e234-4f3c-a4f2-bf2f25802e9c">
 
 ###### 常见问题：
 
