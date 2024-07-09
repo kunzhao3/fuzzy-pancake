@@ -216,44 +216,44 @@ where f_pricing_type = 2
 <img width="955" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/4e718dce-b35d-4447-97b7-46c9d736513d">
 
 ###### 第二版：按资方+产品+费项维度
-
    单一资方5551产品支持百4,  6901 产品不支持百4情况时，配置 **CAPITAL_PRODUCT_PRE_SETTLE_RATE** 要素
-   要素值：[{"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
+   要素值：
+     [{"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 <img width="943" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/c81815a7-d411-4379-9ce2-229b3963ab9b">
 
 ###### 第三版：按资方+产品+费项维度 默认定价由千一换成了0.065%
-
 ​    单一资方5551产品支持0.065%(即:以前的千一换成了0.065%)配置 **CAPITAL_PRODUCT_PRE_SETTLE_RATE** 要素
-​    要素值：[{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
+​    要素值：
+     [{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 <img width="959" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/b3f072ad-4965-4f00-981a-c31978e7378b">
 
 ###### 第四版：按资方+产品+等级
-
 ​    单一资方5551产品千一和百四配置 **CAPITAL_MILLI_AND_FOURPERCENT_PRE_SETTLE_RATE** 要素
-​    要素值：[{"milliPreSettleRate":[{"name":"5551-A","value":"SERVICE_FEE"}]},{"fourPercentPreSettleRate":[{"name":"5551-B,C,D","value":"SERVICE_FEE_TWO"}]}]
+​    要素值：
+     [{"milliPreSettleRate":[{"name":"5551-A","value":"SERVICE_FEE"}]},{"fourPercentPreSettleRate":[{"name":"5551-B,C,D","value":"SERVICE_FEE_TWO"}]}]
 <img width="1054" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/3e50c8cf-e234-4f3c-a4f2-bf2f25802e9c">
 
 ###### 常见问题：
 
 ​      一， **CAPITAL_PRE_SETTLE_RATE_FEE_CODE**(按资方维度)和**CAPITAL_PRODUCT_PRE_SETTLE_RATE**(按资方+产品+费项维度)**不能共存**只能按场景配置一个；
+
 ​      二，  **CAPITAL_PRE_SETTLE_RATE_FEE_CODE**(按资方维度)和**CAPITAL_PRODUCT_PRE_SETTLE_RATE**(按资方+产品+费项维度)
 ​              都配置，优先**CAPITAL_PRODUCT_PRE_SETTLE_RATE**(按资方+产品维度+费项)
+
 ​      三，**CAPITAL_PRODUCT_PRE_SETTLE_RATE**(按资方+产品维度+费项)，**相同产品，相同费项**
 ​              如果一个资方但不同产品，5551要默认0.065%，5551还要支持4%，
 ​              配置了 [{"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 ​              也配置了 [{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 ​              即：
-
 ```json
       [
         {"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}},
         {"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}
       ]
 ```
-​              优先 [{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
+​     优先 [{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 ​     四，如果一个资方但不同产品，5551要默认0.065%，6901支持4%，**不同产品相同费项**，那配置就可以是这样
 ​              **CAPITAL_PRODUCT_PRE_SETTLE_RATE**(按资方+产品维度+费项)
-
 ```json
       [
         {"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}},
@@ -263,7 +263,6 @@ where f_pricing_type = 2
 
 ​     五，如果一个资方不同产品，5551要默认0.065%，6901支持4%，**不同产品不同费项，费项里都没利息**，如：5551是担保费，6901是服务费
 ​           **CAPITAL_PRODUCT_PRE_SETTLE_RATE**(按资方+产品维度+费项)
-
 ```json
        [
          {"defaultPreSettleRate":{"name":"5551","value":"GUARANTEE_FEE"}},
