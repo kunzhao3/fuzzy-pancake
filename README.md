@@ -218,19 +218,19 @@ where f_pricing_type = 2
 ###### 第二版：按资方+产品+费项维度
    单一资方5551产品支持百4,  6901 产品不支持百4情况时，配置 **CAPITAL_PRODUCT_PRE_SETTLE_RATE** 要素
    要素值：
-     [{"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
+          [{"preSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 <img width="943" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/c81815a7-d411-4379-9ce2-229b3963ab9b">
 
 ###### 第三版：按资方+产品+费项维度 默认定价由千一换成了0.065%
 ​    单一资方5551产品支持0.065%(即:以前的千一换成了0.065%)配置 **CAPITAL_PRODUCT_PRE_SETTLE_RATE** 要素
 ​    要素值：
-     [{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
+         [{"defaultPreSettleRate":{"name":"5551","value":"SERVICE_FEE"}}]
 <img width="959" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/b3f072ad-4965-4f00-981a-c31978e7378b">
 
 ###### 第四版：按资方+产品+等级
 ​    单一资方5551产品千一和百四配置 **CAPITAL_MILLI_AND_FOURPERCENT_PRE_SETTLE_RATE** 要素
 ​    要素值：
-     [{"milliPreSettleRate":[{"name":"5551-A","value":"SERVICE_FEE"}]},{"fourPercentPreSettleRate":[{"name":"5551-B,C,D","value":"SERVICE_FEE_TWO"}]}]
+        [{"milliPreSettleRate":[{"name":"5551-A","value":"SERVICE_FEE"}]},{"fourPercentPreSettleRate":[{"name":"5551-B,C,D","value":"SERVICE_FEE_TWO"}]}]
 <img width="1054" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/3e50c8cf-e234-4f3c-a4f2-bf2f25802e9c">
 
 ###### 常见问题：
