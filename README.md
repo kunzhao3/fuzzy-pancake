@@ -136,7 +136,8 @@ LIMIT 1;
 <img width="958" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/764debd7-c0bd-4443-9eee-080250c58bb9"> 
 ​       
 二，期次对应不上，如：新网银行进件依赖资方的还款计划，测试环境挡板配置的是9期，但进件是12期；传给PEC的参数也是12期A等级；
-<img width="945" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/b85952aa-8b46-47b5-a716-18bcb55ecf38">
+<img width="958" alt="image" src="https://github.com/kunzhao3/fuzzy-pancake/assets/25682938/eca284c8-4515-4ab5-baa6-9bff78edc4f9">
+
 
 ##### 2、查询合适的资方定价
 
